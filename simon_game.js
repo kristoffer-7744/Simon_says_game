@@ -9,9 +9,10 @@ let high = document.querySelector(".highscore");
 
 document.addEventListener("keypress", function(){
   if(started==false){
+    levelUp();
     started=true;
   }
-  levelUp();
+ 
 });
 
 function levelUp(){

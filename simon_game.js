@@ -55,7 +55,7 @@ function checkAns(idx){
       document.querySelector("body").style.backgroundColor = "white";
     }, 150);
 
-    h2.innerHTML = `Game over! Your score is : <b>${level}</b><br> press any key to restart tha game`; 
+    h2.innerHTML = `Game over! Your score is : <b>${level}</b><br> press any key to restart the game`; 
     highScore();
     reset();
    

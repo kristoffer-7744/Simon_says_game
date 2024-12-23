@@ -1,12 +1,16 @@
 body{
     text-align: center;
+<<<<<<< HEAD
     color: white;
     background-color:black;
     padding: 10px;
+=======
+>>>>>>> 37b724b7c42315a090277d026e3b474c7d1defb5
 }
 .btn-container{
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     flex-wrap: wrap;
     gap:10px;
 
@@ -20,6 +24,15 @@ body{
     min-height: 60px;
     margin: 2vw;
     cursor: pointer;
+=======
+}
+.btn{
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 20px;
+>>>>>>> 37b724b7c42315a090277d026e3b474c7d1defb5
 }
 .yellow{
     background-color: #f99b45;
@@ -34,6 +47,7 @@ body{
     background-color: #63aac0 ;
 }
 .flash{
+<<<<<<< HEAD
     background-color: black;
 }
 .userflash{
@@ -55,3 +69,10 @@ body{
 
 
   
+=======
+    background-color: white;
+}
+.userflash{
+    background-color: yellow;
+}
+>>>>>>> 37b724b7c42315a090277d026e3b474c7d1defb5

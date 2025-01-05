@@ -8,13 +8,6 @@ let h2= document.querySelector("h2");
 let high = document.querySelector(".highscore");
 const startBtn = document.getElementById("start");
 
-// document.addEventListener("keypress", function(){
-//   if(started==false){
-//     levelUp();
-//     started=true;
-//   }
-// });
-
 startBtn.addEventListener("click", function(){
   if(started==false){
     levelUp();

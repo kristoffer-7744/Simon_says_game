@@ -13,12 +13,17 @@ body {
 h1, h2 {
     margin: 10px 0;
 }
-h1 {
+#heading{
+    margin-bottom: 20px;
     font-size: 2rem;
+    color: #060707;
+    text-shadow: 0 0 1px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00CED1;
 }
 
 h2 {
     font-size: 1rem;
+    color:  #0be8e8;
+    text-shadow: 0 0 1px #000000, 0 0 5px #000000, 0 0 10px #000000;
 }
 
 #high {
@@ -28,6 +33,7 @@ h2 {
 .highscore {
     margin: 10px 0;
     font-size: 1rem;
+    color: #41ec97;
 }
 
 .btn-container {

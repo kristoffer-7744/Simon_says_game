@@ -54,31 +54,37 @@ h2 {
     border-radius: 15px;
     cursor: pointer;
     box-shadow: 10px 10px #271b1b;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     margin: 2px;
 }
 
 .btn:active {
     transform: translateY(4px);
     box-shadow: 6px 6px #271b1b;
+    outline: none;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 button {
     margin-top: 20px;
     padding: 5px 30px;
-    border-radius: 10px;
+    border-radius: 7px;
     color: rgb(10, 1, 1);
     font-weight: bold;
+    cursor: pointer;
     font-family: 'Fredokav One', cursive;
     border: 2px solid #383535;
     background-color: rgb(110, 247, 110);
-    box-shadow: 7px 7px #271b1b;
+    box-shadow: 6px 6px #271b1b;
     transition-duration: 0.2s;
 }
 
 button:active {
     transform: translateY(2px);
-    box-shadow: 5px 5px #271b1b;
+    box-shadow: 4px 4px #271b1b;
 }
 
 .yellow {
@@ -101,7 +107,7 @@ button:active {
     background-color: white;
 }
 .userflash {
-    background-color: #333;
+    background-color: #000000;
 }
 
 @media (max-width: 600px) {

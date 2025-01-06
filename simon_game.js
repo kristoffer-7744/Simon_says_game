@@ -8,22 +8,25 @@ let h2= document.querySelector("h2");
 let high = document.querySelector(".highscore");
 const startBtn = document.getElementById("start");
 const click = new Audio('Sounds/click.mp3');
-const backgroundM = new Audio('Sounds/background2.mp3');
+const backgroundM = new Audio('Sounds/background.mp3');
 const lvlUp = new Audio('Sounds/levelUp.mp3');
 const gameOver = new Audio('Sounds/gameOver.mp3');
 const beginBtn = new Audio('Sounds/startBtn.mp3');
 
 //Starting point of the game
 startBtn.addEventListener("click", function(){
+  backgroundM.play();
+  backgroundM.loop = true;
+  backgroundM.volume = 0.1;
   beginBtn.play();
-  beginBtn.volume = 0.3;
+  beginBtn.volume = 0.2;
   if(started==false){
     levelUp();
     started=true;
-    //adding CLICK event on each button.
     let allBtns = document.querySelectorAll(".btn");
     for(let btn of allBtns){
-      btn.addEventListener("click", btnpPress);
+      btn.addEventListener("click", btnpPress); //adding CLICK event on each button.
+
     }
   }
 });
@@ -41,6 +44,7 @@ function levelUp(){
     },400);
     if(level>1){
       lvlUp.play();
+      lvlUp.volume = 0.3;
     }
 
     let randIdx = Math.floor(Math.random() * 4);
@@ -76,7 +80,7 @@ function checkAns(idx){
     }
   }else{
     gameOver.play();
-    gameOver.volume = 0.5;
+    gameOver.volume = 0.3;
     gameOver.playbackRate = 1.8;
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(function (){
@@ -84,8 +88,8 @@ function checkAns(idx){
     }, 150);
 
     h2.innerHTML = `Game over! Your score is : <b>${level}</b>`;
-    h2.style.transform = "scaleX(0)"
-    h2.style.transition = "0.3s";
+    h2.style.transform = "scaleX(1.3)";
+    h2.style.transition = "0.2s";
     setTimeout(() => {
       h2.style.transform = "scaleX(1)"
     },300);
@@ -99,8 +103,8 @@ function checkAns(idx){
 function btnpPress(){
   //Sound's whenever btn being pressed
   click.play();
-  click.playbackRate = 3;
-  click.volume = 1;
+  click.playbackRate = 5;
+  click.volume = 0.9;
   let btn = this;
   userFlash(btn);
   userColor = btn.getAttribute("id");

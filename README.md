@@ -5,22 +5,23 @@ A web-based memory game where players replicate a sequence of colors generated b
 ---
 
 ## 🖥️ Demo
-Play the game: [Simon Says Game](#) (Add your hosted URL here if available)
+🎮 Enjoy The Game : [[ Start](https://kristoffer-7744.github.io/Simon_says_game/)](#)
 
 ---
 
 ## 🚀 Features
-- Dynamic level progression with increasing difficulty.
-- High score tracking.
-- Interactive user interface with color flashes and effects.
-- Fully responsive design for mobile and desktop screens.
+Dynamic level progression with increasing difficulty.
+High score tracking with visual feedback.
+Interactive user interface with color flashes, sound effects, and animations.
+Fully responsive design for mobile and desktop screens.
+Game-over mechanism with visual effects and score display.
 
 ---
 
 ## 🛠️ Technologies Used
-- **HTML**: For the structure of the web page.
-- **CSS**: For styling and responsiveness.
-- **JavaScript**: For game logic and interactivity.
+HTML: Structure and layout of the game page.
+CSS: Styling for the game's user interface, including button designs, animations, and responsiveness.
+JavaScript: Handles the game logic, including user input, color sequence generation, sound effects, and high score tracking.
 
 ---
 
@@ -30,6 +31,7 @@ simon-says-game/
 ├── index.html       # Main HTML file
 ├── simon_game.css   # Styling for the game
 ├── simon_game.js    # Game logic
+├── Sounds/          # Folder containing sound files for the game (click, background music, etc.)
 ```
 
 ---
@@ -37,7 +39,7 @@ simon-says-game/
 ## how to use
 ### 1. Clone or download the repository
 ```base
-git clone <repository-url>
+git clone <https://github.com/kristoffer-7744/Simon_says_game.git>
 ```
 
 ---
@@ -53,7 +55,6 @@ git clone <repository-url>
 ---
 
 ## Future Enhancement
--Add sound effects for each button press.
 -Implement a leaderboard to track multiple players' high scores.
 -Add a timer for added difficulty.
 

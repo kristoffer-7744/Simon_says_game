@@ -5,7 +5,7 @@ A web-based memory game where players replicate a sequence of colors generated b
 ---
 
 ## 🖥️ Demo
-🎮 Enjoy The Game : [[ Start](https://kristoffer-7744.github.io/Simon_says_game/).
+🎮 Enjoy The Game : [[ Start](https://kristoffer-7744.github.io/Simon_says_game/)].
 
 ---
 

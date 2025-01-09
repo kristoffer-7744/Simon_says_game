@@ -1,17 +1,20 @@
 let gameSeq = [];
 let userSeq = [];
 let level=0;
-let highScor = 5;
+let highScor = 2;
 let started=false;
 let btns = ["yellow", "red", "purple", "green"];
 let h2= document.querySelector("h2");
 let high = document.querySelector(".highscore");
 const startBtn = document.getElementById("start");
-const click = new Audio('Sounds/click.mp3');
+
+//sound effects for game
 const backgroundM = new Audio('Sounds/background.mp3');
-const lvlUp = new Audio('Sounds/levelUp.mp3');
-const gameOver = new Audio('Sounds/gameOver.mp3');
 const beginBtn = new Audio('Sounds/startBtn.mp3');
+const click = new Audio('Sounds/click.mp3');
+const lvlUp = new Audio('Sounds/levelUp.mp3');
+const highscoreSound = new Audio('Sounds/highscore.mp3');
+const gameOver = new Audio('Sounds/gameOver.mp3');
 
 //Starting point of the game
 startBtn.addEventListener("click", function(){
@@ -79,9 +82,11 @@ function checkAns(idx){
       setTimeout(levelUp, 750);
     }
   }else{
-    gameOver.play();
-    gameOver.volume = 0.3;
-    gameOver.playbackRate = 1.8;
+    if(highScor >= level) {
+      gameOver.play();
+      gameOver.volume = 0.3;
+      gameOver.playbackRate = 1.8;
+    }
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(function (){
       document.querySelector("body").style.backgroundColor = "#282c34";
@@ -115,7 +120,9 @@ function btnpPress(){
 //showing highschore to the player
 function highScore(){
   if(highScor < level){
-    highScor=level;
+    highscoreSound.play();
+    highscoreSound.volume = 0.2;
+    highScor = level;
     h2.innerText = `HIGHSCORE`;
     h2.style.transform = "scale(3)";
     h2.style.transition = "0.5s";
@@ -138,4 +145,5 @@ function reset (){
     btn.removeEventListener("click", btnpPress);
   }
   startBtn.innerText="Play Again";
+  backgroundM.pause();
 }

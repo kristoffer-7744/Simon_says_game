@@ -116,4 +116,13 @@ button:active {
         height: 100px;
         border-radius: 10px;
     }
+
+    body {
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    button{
+        font-family: 'Orbitron', sans-serif;
+
+    }
 }

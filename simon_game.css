@@ -157,9 +157,10 @@ h3:hover {
 
   @media (max-width: 768px) {
     #helpDiv {
-        margin-top: 50px;
+        align-content: center;
+        margin: 20px;
         width: 80%;
-        height: auto;
+        height: 90%;
     }
   }
  

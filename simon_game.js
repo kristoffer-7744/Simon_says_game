@@ -1,12 +1,14 @@
 let gameSeq = [];
 let userSeq = [];
 let level=0;
-let highScor = 2;
+let highScor = 5;
 let started=false;
 let btns = ["yellow", "red", "purple", "green"];
 let h2= document.querySelector("h2");
 let high = document.querySelector(".highscore");
 const startBtn = document.getElementById("start");
+const mainDiv = document.getElementById("mainContainer");
+const help = document.getElementById("help");
 
 //sound effects for game
 const backgroundM = new Audio('Sounds/background.mp3');
@@ -147,3 +149,38 @@ function reset (){
   startBtn.innerText="Play Again";
   backgroundM.pause();
 }
+
+//Added click event on "?", this will display help guide 
+help.addEventListener("click", () => {
+  helpDiv.style.display = "block";
+  help.style.display = "none";
+  startBtn.style.display = "none";
+});
+
+//created user help guide
+const helpDiv = document.createElement("div");
+helpDiv.setAttribute("style",
+  "display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5)"
+); 
+mainDiv.appendChild(helpDiv);
+
+const div = document.createElement("div");
+div.setAttribute("id", "helpDiv");
+helpDiv.appendChild(div);
+
+const para = document.createElement("p");
+para.style.color = "black";
+para.innerHTML = "<b>! Welcome to Simon Says !</b><br><br><b> How To Play ?</b><hr><b>Start the Game :</b> Click the Start button to begin.<br><b>Watch the Sequence :</b> The game will flash a color (or a series of colors). Memorize the sequence.<br><b>Your Turn</b> : Click the buttons in the same order as the sequence shown.<br><b>Progression : </b> Each round, a new color is added, making the sequence longer and harder.<br><b>Game Over :</b> If you make a mistake, the game ends, and your score is displayed.<br><br><b>Tips :<hr></b> Focus and try to memorize the sequence carefully.<br> Sound effects can help you remember the order of colors.";
+div.appendChild(para);
+
+//Created a button redirecting to the game
+const goBackBtn = document.createElement("button");
+goBackBtn.innerText = "Back";
+div.appendChild(goBackBtn);
+
+goBackBtn.addEventListener("click", () => {
+  helpDiv.style.display = "none";
+  help.style.display = "block";
+  startBtn.style.display = "block";
+})
+

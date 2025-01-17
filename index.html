@@ -7,19 +7,22 @@
     <title>Simon says game</title>
 </head>
 <body>
-    <h1 id="heading">Simon Says Game</h1>
-    <h2>Press start to START the game</h2>
-    <h3 class="highscore"></h3>
-    <div class="btn-container">
-        <div class="line-one">
-            <div class="yellow one btn" id="yellow" type="button"></div>
-            <div class="red two btn" id="red" type="button"></div>
+    <div id="mainContainer">
+        <h1 id="heading">Simon Says Game</h1>
+        <h2>Press start to START the game</h2>
+        <h3 class="highscore"></h3>
+        <div class="btn-container">
+            <div class="line-one">
+                <div class="yellow one btn" id="yellow" type="button"></div>
+                <div class="red two btn" id="red" type="button"></div>
+            </div>
+            <div class="line-two">
+                <div class="purple three btn" id="purple" type="button"></div>
+                <div class="green four btn" id="green" type="button"></div>
+            </div>
+            <button id="start">Start</button>
+            <h3 id="help">?</h3>
         </div>
-        <div class="line-two">
-            <div class="purple three btn" id="purple" type="button"></div>
-            <div class="green four btn" id="green" type="button"></div>
-        </div>
-        <button id="start">Start</button>
     </div>
     <script src="simon_game.js"></script>
 </body>

@@ -179,6 +179,8 @@ goBackBtn.innerText = "Back";
 div.appendChild(goBackBtn);
 
 goBackBtn.addEventListener("click", () => {
+  beginBtn.play();
+  beginBtn.volume = 0.2;
   helpDiv.style.display = "none";
   help.style.display = "block";
   startBtn.style.display = "block";
